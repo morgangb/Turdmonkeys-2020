@@ -63,13 +63,25 @@ public class KidController : MonoBehaviour
             }
 
             //Grabbin
-            if (Input.GetButton("Grab")) {
+            if (Input.GetButtonDown("Grab") && hit.transform) {
                 if (hit.transform.gameObject == myRobot) {
                     hasRobot = true;
                     myRobot.SetActive(false);
                 }
                 else if (hit.transform.GetComponent<GrabController>()) {
                     grabbing = hit.transform.gameObject;
+                    grabbing.transform.rotation = transform.rotation;
+                    grabbing.GetComponent<GrabController>().grabber = gameObject;
+                    transform.SetParent(grabbing.transform);
+                    myController.enabled = false;
+                }
+            } //Let-goin
+            else if (Input.GetButtonUp("Grab")) {
+                if (grabbing) {
+                    myController.enabled = true;
+                    grabbing.GetComponent<GrabController>().grabber = null;
+                    transform.SetParent(null);
+                    grabbing = null;
                 }
             }
         }
@@ -78,6 +90,15 @@ public class KidController : MonoBehaviour
         if (Input.GetButtonUp("Switch")) {
             isRobot = !isRobot;
             hasRobot = false;
+
+            //set active based on isrobot
+            myRobotListener.enabled = isRobot;
+            myRobotCamera.enabled = isRobot;
+            myRobotController.enabled = isRobot;
+            myListener.enabled = !isRobot;
+            myCamera.enabled = !isRobot;
+            myController.enabled = !isRobot;
+
             if (myMarker) {
                 myRobot.transform.position = myMarker.transform.position;
                 myRobot.transform.rotation = transform.rotation;
@@ -85,13 +106,5 @@ public class KidController : MonoBehaviour
             }
             myRobot.SetActive(true);
         }
-
-        //set active based on isrobot
-        myRobotListener.enabled = isRobot;
-        myRobotCamera.enabled = isRobot;
-        myRobotController.enabled = isRobot;
-        myListener.enabled = !isRobot;
-        myCamera.enabled = !isRobot;
-        myController.enabled = !isRobot;
     }
 }
