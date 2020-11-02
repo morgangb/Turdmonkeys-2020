@@ -9,14 +9,21 @@ public class KidController : MonoBehaviour
     [SerializeField] private Camera myCamera;
     [SerializeField] private AudioListener myListener;
     [SerializeField] private GameObject marker;
+    [SerializeField] private float dist = 5f;
+    [SerializeField] private float throwSpeed = 5f;
     
     private bool isRobot; //Is the player controlling the robot rn?
     private TurdmonkeysFirstPersonController myController;
     private GameObject myMarker;
+    private int layerMask;
 
     // Start is called before the first frame update
     void Start()
     {
+        //layermask to avoid self in raycasting
+        layerMask = 1 << 8;
+        layerMask = ~layerMask;
+
         myController = GetComponent<TurdmonkeysFirstPersonController>(); //get the fps cont
     }
 
@@ -27,16 +34,23 @@ public class KidController : MonoBehaviour
 
         }
         else {
+            //Cast ray for marker placement
+            RaycastHit hit;
+            Vector3 markerLoc;
+            if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward), out hit, dist, layerMask)) {
+                markerLoc = hit.point;
+            }
+            else {
+                markerLoc = myCamera.transform.position + dist * myCamera.transform.TransformDirection(Vector3.forward);
+            }
+
             //Make Marker
             if (Input.GetButtonDown("Switch")) {
-                RaycastHit hit;
-                Ray ray = new Ray (myCamera.transform.position, transform.forward);
-                Physics.Raycast(ray, out hit, 5f);
-                //myMarker = Instantiate(marker, hit.point);
+                myMarker = Instantiate(marker, markerLoc, Quaternion.identity);
             }
-            //Marker
+            //Move Marker
             else if (Input.GetButton("Switch")) {
-
+                myMarker.transform.position = markerLoc;
             }
         }
 
@@ -44,6 +58,11 @@ public class KidController : MonoBehaviour
         //Toggle isrobot
         if (Input.GetButtonUp("Switch")) {
             isRobot = !isRobot;
+            if (myMarker) { 
+                myRobot.transform.position = myMarker.transform.position;
+                myRobot.transform.rotation = transform.rotation;
+                Destroy(myMarker);
+            }
         }
 
         //set active based on isrobot

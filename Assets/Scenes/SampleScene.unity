@@ -346,6 +346,12 @@ PrefabInstance:
       propertyPath: myListener
       value: 
       objectReference: {fileID: 2033385945}
+    - target: {fileID: 161403796975412769, guid: 754fac04de4e8fe478f5d0ccaa1a60e1,
+        type: 3}
+      propertyPath: marker
+      value: 
+      objectReference: {fileID: 5102306607795468497, guid: ce1e63c43b0146b4999c5aaf0d6ec4bb,
+        type: 3}
     - target: {fileID: 233967200024388564, guid: 754fac04de4e8fe478f5d0ccaa1a60e1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -410,6 +416,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 233967200024428532, guid: 754fac04de4e8fe478f5d0ccaa1a60e1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 233967200024428534, guid: 754fac04de4e8fe478f5d0ccaa1a60e1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264347496449801353, guid: 754fac04de4e8fe478f5d0ccaa1a60e1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 754fac04de4e8fe478f5d0ccaa1a60e1, type: 3}
