@@ -12,10 +12,14 @@ public class KidController : MonoBehaviour
     [SerializeField] private float dist = 5f;
     
     private TurdmonkeysFirstPersonController myController;
+    private TurdmonkeysFirstPersonController myRobotController;
+    private Camera myRobotCamera;
+    private AudioListener myRobotListener;
     private GameObject myMarker;
     private int layerMask;
 
     public bool isRobot; //Is the player controlling the robot rn?
+    public bool hasRobot; //Does the player have the robot rn?
 
     // Start is called before the first frame update
     void Start()
@@ -25,17 +29,18 @@ public class KidController : MonoBehaviour
         layerMask = ~layerMask;
 
         myRobot.GetComponent<RobotController>().myKid = gameObject;
+        myRobotController = myRobot.GetComponent<TurdmonkeysFirstPersonController>();
+        myRobotCamera = myRobot.GetComponentInChildren<Camera>();
+        myRobotListener = myRobot.GetComponentInChildren<AudioListener>();
+
         myController = GetComponent<TurdmonkeysFirstPersonController>(); //get the fps cont
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isRobot) {
-
-        }
-        else {
-            //Cast ray for marker placement
+        if (!isRobot) {
+            //Cast ray for robot stuff
             RaycastHit hit;
             Vector3 markerLoc;
             if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward), out hit, dist, layerMask)) {
@@ -45,29 +50,40 @@ public class KidController : MonoBehaviour
                 markerLoc = myCamera.transform.position + dist * myCamera.transform.TransformDirection(Vector3.forward);
             }
 
-            //Make Marker
-            if (Input.GetButtonDown("Switch")) {
-                myMarker = Instantiate(marker, markerLoc, Quaternion.identity);
+            if (hasRobot) {
+                //Make Marker
+                if (Input.GetButtonDown("Switch")) {
+                    myMarker = Instantiate(marker, markerLoc, Quaternion.identity);
+                }
+                //Move Marker
+                else if (Input.GetButton("Switch")) {
+                    myMarker.transform.position = markerLoc;
+                }
             }
-            //Move Marker
-            else if (Input.GetButton("Switch")) {
-                myMarker.transform.position = markerLoc;
+            else {
+                if (Input.GetButton("Grab") && hit.transform.gameObject == myRobot) {
+                    hasRobot = true;
+                    myRobot.SetActive(false);
+                }
             }
         }
 
-        
         //Toggle isrobot
         if (Input.GetButtonUp("Switch")) {
             isRobot = !isRobot;
+            hasRobot = false;
             if (myMarker) {
                 myRobot.transform.position = myMarker.transform.position;
                 myRobot.transform.rotation = transform.rotation;
                 Destroy(myMarker);
             }
+            myRobot.SetActive(true);
         }
 
         //set active based on isrobot
-        myRobot.SetActive(isRobot);
+        myRobotListener.enabled = isRobot;
+        myRobotCamera.enabled = isRobot;
+        myRobotController.enabled = isRobot;
         myListener.enabled = !isRobot;
         myCamera.enabled = !isRobot;
         myController.enabled = !isRobot;
