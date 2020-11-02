@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Cameron's Asset Shite/Networking Stuff/Scenes/Main.unity
+    guid: aaf1905618400b143a318c5ae808eeb6
   m_configObjects: {}
