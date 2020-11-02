@@ -17,6 +17,7 @@ public class KidController : MonoBehaviour
     private AudioListener myRobotListener;
     private GameObject myMarker;
     private int layerMask;
+    private GameObject grabbing;
 
     public bool isRobot; //Is the player controlling the robot rn?
     public bool hasRobot; //Does the player have the robot rn?
@@ -60,10 +61,15 @@ public class KidController : MonoBehaviour
                     myMarker.transform.position = markerLoc;
                 }
             }
-            else {
-                if (Input.GetButton("Grab") && hit.transform.gameObject == myRobot) {
+
+            //Grabbin
+            if (Input.GetButton("Grab")) {
+                if (hit.transform.gameObject == myRobot) {
                     hasRobot = true;
                     myRobot.SetActive(false);
+                }
+                else if (hit.transform.GetComponent<GrabController>()) {
+                    grabbing = hit.transform.gameObject;
                 }
             }
         }
