@@ -6,8 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/OLD ASSETS/Scenes/Rooms.unity
     guid: 5534861bfbecf5c479c58e27aa126080
+=======
+    path: Assets/Cameron's Asset Shite/Networking Stuff/Scenes/Main.unity
+    guid: aaf1905618400b143a318c5ae808eeb6
+>>>>>>> main
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
