@@ -17,7 +17,7 @@ MonoBehaviour:
   myListener: {fileID: 233967200031367668}
   marker: {fileID: 5102306607795468497, guid: ce1e63c43b0146b4999c5aaf0d6ec4bb, type: 3}
   dist: 5
-  throwSpeed: 5
+  isRobot: 0
 --- !u!1 &3264347496449801353
 GameObject:
   m_ObjectHideFlags: 0
