@@ -120,6 +120,7 @@
     <Compile Include="Assets\OLD ASSETS\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\OLD ASSETS\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\OLD ASSETS\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+    <Compile Include="Assets\OLD ASSETS\Scripts\GameSettings.cs.cs" />
     <Compile Include="Assets\OLD ASSETS\Scripts\NetWork\PhotonLobby.cs" />
     <Compile Include="Assets\OLD ASSETS\Scripts\UI\Rooms\CreateOrJoinRoomCanvas.cs" />
     <Compile Include="Assets\OLD ASSETS\Scripts\UI\Rooms\CreateRoomMenu.cs" />
