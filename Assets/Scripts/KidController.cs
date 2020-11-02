@@ -10,12 +10,12 @@ public class KidController : MonoBehaviour
     [SerializeField] private AudioListener myListener;
     [SerializeField] private GameObject marker;
     [SerializeField] private float dist = 5f;
-    [SerializeField] private float throwSpeed = 5f;
     
-    private bool isRobot; //Is the player controlling the robot rn?
     private TurdmonkeysFirstPersonController myController;
     private GameObject myMarker;
     private int layerMask;
+
+    public bool isRobot; //Is the player controlling the robot rn?
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,7 @@ public class KidController : MonoBehaviour
         layerMask = 1 << 8;
         layerMask = ~layerMask;
 
+        myRobot.GetComponent<RobotController>().myKid = gameObject;
         myController = GetComponent<TurdmonkeysFirstPersonController>(); //get the fps cont
     }
 
@@ -58,7 +59,7 @@ public class KidController : MonoBehaviour
         //Toggle isrobot
         if (Input.GetButtonUp("Switch")) {
             isRobot = !isRobot;
-            if (myMarker) { 
+            if (myMarker) {
                 myRobot.transform.position = myMarker.transform.position;
                 myRobot.transform.rotation = transform.rotation;
                 Destroy(myMarker);

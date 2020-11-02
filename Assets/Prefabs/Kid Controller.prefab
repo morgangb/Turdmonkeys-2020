@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989920f08a3141345aaecc60fa5ee433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myRobot: {fileID: 0}
+  myCamera: {fileID: 233967200024886740}
+  myListener: {fileID: 233967200031367668}
+  marker: {fileID: 5102306607795468497, guid: ce1e63c43b0146b4999c5aaf0d6ec4bb, type: 3}
+  dist: 5
+  throwSpeed: 5
 --- !u!1 &3264347496449801353
 GameObject:
   m_ObjectHideFlags: 0
@@ -23,7 +29,7 @@ GameObject:
   - component: {fileID: 6516115983181875883}
   - component: {fileID: 4292305069464408183}
   - component: {fileID: 2339563330919400067}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,17 +107,17 @@ PrefabInstance:
     - target: {fileID: 500310316650900817, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.469296
       objectReference: {fileID: 0}
     - target: {fileID: 500310316650900817, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 500310316650900817, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.1957984
       objectReference: {fileID: 0}
     - target: {fileID: 500310316650900817, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
@@ -158,6 +164,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kid Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 500310316651327857, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 500310316651327859, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 556560cdf3eb1a74183e6c73318f053b, type: 3}
 --- !u!1 &233967200024428532 stripped
@@ -169,6 +185,18 @@ GameObject:
 --- !u!4 &233967200024388564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 500310316650900817, guid: 556560cdf3eb1a74183e6c73318f053b,
+    type: 3}
+  m_PrefabInstance: {fileID: 418344901977788037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &233967200024886740 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 500310316650345297, guid: 556560cdf3eb1a74183e6c73318f053b,
+    type: 3}
+  m_PrefabInstance: {fileID: 418344901977788037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &233967200031367668 stripped
+AudioListener:
+  m_CorrespondingSourceObject: {fileID: 500310316644380529, guid: 556560cdf3eb1a74183e6c73318f053b,
     type: 3}
   m_PrefabInstance: {fileID: 418344901977788037}
   m_PrefabAsset: {fileID: 0}

@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &796853392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796853394}
+  - component: {fileID: 796853393}
+  - component: {fileID: 796853395}
+  m_Layer: 9
+  m_Name: Post Processor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &796853394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796853392}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3021690551460297809}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &796853393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796853392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 37767e74fda34414ba27fd78e8ef3730, type: 2}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!135 &796853395
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796853392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2547627665128355908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,6 +74,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b71f27b7e12e4b47a1ffa63f72fe728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dist: 0
+  myKid: {fileID: 0}
 --- !u!1 &4941275670396081881
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,17 +179,17 @@ PrefabInstance:
     - target: {fileID: 500310316650900817, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.163918
       objectReference: {fileID: 0}
     - target: {fileID: 500310316650900817, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 500310316650900817, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.4490213
       objectReference: {fileID: 0}
     - target: {fileID: 500310316650900817, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
@@ -176,6 +240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Robot Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 500310316651327857, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 500310316654822577, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
