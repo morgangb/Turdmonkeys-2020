@@ -32,7 +32,7 @@ public class KidController : MonoBehaviour
                 RaycastHit hit;
                 Ray ray = new Ray (myCamera.transform.position, transform.forward);
                 Physics.Raycast(ray, out hit, 5f);
-                myMarker = Instantiate(marker, hit.point);
+                //myMarker = Instantiate(marker, hit.point);
             }
             //Marker
             else if (Input.GetButton("Switch")) {
