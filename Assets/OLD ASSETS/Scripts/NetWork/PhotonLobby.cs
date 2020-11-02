@@ -10,6 +10,8 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     private void Start()
     {
         print("Connecting to server");
+        PhotonNetwork.NickName = MasterManager.GameSettings.NickName;
+        PhotonNetwork.GameVersion = MasterManager.GameSettings.GameVersion;
         PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.ConnectUsingSettings();
         
