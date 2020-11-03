@@ -11,17 +11,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _GLASS_
-    second: {fileID: 2100000, guid: 2332499eb30d13848852e3d5c1032c9c, type: 2}
+    second: {fileID: 2100000, guid: 91cc10a6a9283664cb4b36870270708f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _MODEL_L2_
-    second: {fileID: 2100000, guid: e98fe0af503d0734e815c026482c1543, type: 2}
+    second: {fileID: 2100000, guid: 314530d2a33bd4e44ae4a6590b6ec153, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _MODEL_L2_light
-    second: {fileID: 2100000, guid: c1286c1834289ea4c840028e8d549348, type: 2}
+    second: {fileID: 2100000, guid: 48734a2dafa5d3e49ad9c24387881d7d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

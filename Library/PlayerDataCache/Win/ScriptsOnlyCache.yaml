@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-firstpass.dll:
+    - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     Assembly-CSharp.dll:
     - CreateOrJoinRoomCanvas
     - CreateRoomMenu
@@ -143,83 +145,83 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11498}
+      Script: {instanceID: 11482}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 11582}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11626}
+      Script: {instanceID: 11584}
     - Class: 114
-      Script: {instanceID: 11690}
+      Script: {instanceID: 11628}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11692}
     - Class: 114
-      Script: {instanceID: 11972}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 12000}
+      Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 12008}
+      Script: {instanceID: 12002}
     - Class: 114
-      Script: {instanceID: 12052}
+      Script: {instanceID: 12010}
     - Class: 114
-      Script: {instanceID: 12198}
+      Script: {instanceID: 12054}
     - Class: 114
-      Script: {instanceID: 12380}
+      Script: {instanceID: 12200}
     - Class: 114
-      Script: {instanceID: 12414}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 12592}
+      Script: {instanceID: 12416}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 13034}
+      Script: {instanceID: 12720}
     - Class: 114
-      Script: {instanceID: 13160}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13290}
+      Script: {instanceID: 13162}
     - Class: 114
-      Script: {instanceID: 13308}
+      Script: {instanceID: 13292}
     - Class: 114
-      Script: {instanceID: 13554}
+      Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 13606}
+      Script: {instanceID: 13556}
     - Class: 114
-      Script: {instanceID: 13700}
+      Script: {instanceID: 13608}
     - Class: 114
-      Script: {instanceID: 13714}
+      Script: {instanceID: 13702}
     - Class: 114
-      Script: {instanceID: 13840}
+      Script: {instanceID: 13716}
     - Class: 114
-      Script: {instanceID: 13858}
+      Script: {instanceID: 13844}
     - Class: 114
-      Script: {instanceID: 13880}
+      Script: {instanceID: 13862}
     - Class: 114
-      Script: {instanceID: 14218}
+      Script: {instanceID: 13884}
     - Class: 114
-      Script: {instanceID: 14256}
+      Script: {instanceID: 14222}
     - Class: 114
-      Script: {instanceID: 14266}
+      Script: {instanceID: 14260}
     - Class: 114
-      Script: {instanceID: 14478}
+      Script: {instanceID: 14270}
     - Class: 114
-      Script: {instanceID: 14600}
+      Script: {instanceID: 14482}
     - Class: 114
-      Script: {instanceID: 14748}
+      Script: {instanceID: 14490}
     - Class: 114
-      Script: {instanceID: 15100}
+      Script: {instanceID: 14606}
     - Class: 114
-      Script: {instanceID: 15244}
+      Script: {instanceID: 14754}
     - Class: 114
-      Script: {instanceID: 15282}
+      Script: {instanceID: 15106}
     - Class: 114
-      Script: {instanceID: 15294}
+      Script: {instanceID: 15250}
     - Class: 114
-      Script: {instanceID: 16600}
+      Script: {instanceID: 15288}
     - Class: 114
-      Script: {instanceID: 26914}
+      Script: {instanceID: 15300}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -288,25 +290,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11506}
     - Class: 114
-      Script: {instanceID: 11986}
+      Script: {instanceID: 11988}
     - Class: 114
-      Script: {instanceID: 12038}
+      Script: {instanceID: 12040}
     - Class: 114
-      Script: {instanceID: 12828}
+      Script: {instanceID: 12830}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 12916}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13246}
     - Class: 114
-      Script: {instanceID: 13654}
+      Script: {instanceID: 13292}
     - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 13656}
     - Class: 114
-      Script: {instanceID: 14998}
+      Script: {instanceID: 14254}
     - Class: 114
-      Script: {instanceID: 15018}
+      Script: {instanceID: 15004}
+    - Class: 114
+      Script: {instanceID: 15024}
+    - Class: 114
+      Script: {instanceID: 15106}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -404,6 +410,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 986617f6326feed53ec49f05b68e382c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SingletonReferences
   - hash:
       serializedVersion: 2
       Hash: 4f417ca0a3b31b376eb402726c240bde
@@ -1762,6 +1774,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: df8f1cf82cd539716fa2a71dae2646ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MasterManager
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -2150,18 +2168,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: df8f1cf82cd539716fa2a71dae2646ff
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MasterManager
-  - hash:
-      serializedVersion: 2
-      Hash: 986617f6326feed53ec49f05b68e382c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SingletonReferences
   platform: 5
   scenePathNames:
   - Assets/OLD ASSETS/Scenes/Rooms.unity
