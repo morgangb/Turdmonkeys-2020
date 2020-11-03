@@ -7,10 +7,10 @@ using UnityEngine;
 
 public class SyncLevel : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.Instantiate("Kid Controller", new Vector3(0, 1, 0), Quaternion.identity, 0);
     }
 

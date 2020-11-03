@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-firstpass.dll:
-    - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     Assembly-CSharp.dll:
     - CreateOrJoinRoomCanvas
     - CreateRoomMenu
@@ -297,6 +295,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11356}
     - Class: 114
+      Script: {instanceID: 11506}
+    - Class: 114
       Script: {instanceID: 11988}
     - Class: 114
       Script: {instanceID: 12040}
@@ -314,6 +314,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15004}
     - Class: 114
       Script: {instanceID: 15024}
+    - Class: 114
+      Script: {instanceID: 15106}
     - Class: 114
       Script: {instanceID: 35698}
     - Class: 115
