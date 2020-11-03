@@ -6,6 +6,9 @@ using System.IO;
 
 public class PlayerManager : MonoBehaviour
 {
+    [SerializeField]
+    public string KidType;
+
     PhotonView PV;
     void Awake()
     {
@@ -23,6 +26,6 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
-        PhotonNetwork.Instantiate(Path.Combine("Prefabs", "Kid Controller"), new Vector3(0, 5f, 0), Quaternion.identity);
+        PhotonNetwork.Instantiate(Path.Combine("Prefabs", KidType), new Vector3(0, 5f, 0), Quaternion.identity);
     }
 }

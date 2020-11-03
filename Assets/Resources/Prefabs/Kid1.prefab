@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 500310316651327857, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
       propertyPath: m_Name
-      value: Kid Controller
+      value: Kid1
       objectReference: {fileID: 0}
     - target: {fileID: 500310316651327857, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
@@ -163,6 +163,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7252641258482764694, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: af4aa0e9f96308c438d98b6475e212a6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 556560cdf3eb1a74183e6c73318f053b, type: 3}
 --- !u!1 &233967200024428532 stripped

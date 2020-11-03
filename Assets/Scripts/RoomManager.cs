@@ -8,7 +8,8 @@ using System.IO;
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     public static RoomManager Instance;
-
+    private string KidType;
+    
     void Awake()
     {
         if(Instance)
@@ -35,7 +36,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         if(scene.buildIndex == 1)
         {
-            PhotonNetwork.Instantiate(Path.Combine("Prefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
+            GameObject myplayermanager = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
+            myplayermanager.GetComponent<PlayerManager>().KidType = KidType;
         }
+    }
+
+    public void SetKidType(string setto)
+    {
+        KidType = setto;
     }
 }
