@@ -5,15 +5,17 @@ using UnityStandardAssets.Characters.FirstPerson;
 using Photon;
 using Photon.Pun;
 using Photon.Realtime;
+using System.IO;
 
 public class KidController : MonoBehaviour
 {
-    [SerializeField] private GameObject myRobot;
     [SerializeField] private Camera myCamera;
     [SerializeField] private AudioListener myListener;
     [SerializeField] private GameObject marker;
     [SerializeField] private float dist = 5f;
+    [SerializeField] private GameObject robot;
     
+    private GameObject myRobot;
     private TurdmonkeysFirstPersonController myController;
     private TurdmonkeysFirstPersonController myRobotController;
     private Camera myRobotCamera;
@@ -25,109 +27,115 @@ public class KidController : MonoBehaviour
     public bool isRobot; //Is the player controlling the robot rn?
     public bool hasRobot; //Does the player have the robot rn?
 
+    PhotonView PV;
+
+    private void Awake()
+    {
+        PV = GetComponent<PhotonView>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        if (GetComponent<PhotonView>().IsMine)
-        {
-            //layermask to avoid self in raycasting
-            layerMask = 1 << 8;
-            layerMask = ~layerMask;
+        if(!PV.IsMine) { return; }
 
-            myRobot.GetComponent<RobotController>().myKid = gameObject;
-            myRobotController = myRobot.GetComponent<TurdmonkeysFirstPersonController>();
-            myRobotCamera = myRobot.GetComponentInChildren<Camera>();
-            myRobotListener = myRobot.GetComponentInChildren<AudioListener>();
-
-            myController = GetComponent<TurdmonkeysFirstPersonController>(); //get the fps cont
-        }
+        //layermask to avoid self in raycasting
+        layerMask = 1 << 8;
+        layerMask = ~layerMask;
         
+        myRobot = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "Robot Controller"), transform.position, Quaternion.identity);
+        myRobot.SetActive(false);
+        myRobot.GetComponent<RobotController>().myKid = gameObject;
+        myRobotController = myRobot.GetComponent<TurdmonkeysFirstPersonController>();
+        myRobotCamera = myRobot.GetComponentInChildren<Camera>();
+        myRobotListener = myRobot.GetComponentInChildren<AudioListener>();
+
+        myController = GetComponent<TurdmonkeysFirstPersonController>(); //get the fps cont
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<PhotonView>().IsMine)
+        if(!PV.IsMine) { return; }
+
+        if (!isRobot)
         {
-            if (!isRobot)
+            //Cast ray for robot stuff
+            RaycastHit hit;
+            Vector3 markerLoc;
+            if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward), out hit, dist, layerMask))
             {
-                //Cast ray for robot stuff
-                RaycastHit hit;
-                Vector3 markerLoc;
-                if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward), out hit, dist, layerMask))
-                {
-                    markerLoc = hit.point;
-                }
-                else
-                {
-                    markerLoc = myCamera.transform.position + dist * myCamera.transform.TransformDirection(Vector3.forward);
-                }
+                markerLoc = hit.point;
+            }
+            else
+            {
+                markerLoc = myCamera.transform.position + dist * myCamera.transform.TransformDirection(Vector3.forward);
+            }
 
-                if (hasRobot)
+            if (hasRobot)
+            {
+                //Make Marker
+                if (Input.GetButtonDown("Switch"))
                 {
-                    //Make Marker
-                    if (Input.GetButtonDown("Switch"))
-                    {
-                        myMarker = Instantiate(marker, markerLoc, Quaternion.identity);
-                    }
-                    //Move Marker
-                    else if (Input.GetButton("Switch"))
-                    {
-                        myMarker.transform.position = markerLoc;
-                    }
+                    myMarker = Instantiate(marker, markerLoc, Quaternion.identity);
                 }
-
-                //Grabbin
-                if (Input.GetButtonDown("Grab") && hit.transform)
+                //Move Marker
+                else if (Input.GetButton("Switch"))
                 {
-                    if (hit.transform.gameObject == myRobot)
-                    {
-                        hasRobot = true;
-                        myRobot.SetActive(false);
-                    }
-                    else if (hit.transform.GetComponent<GrabController>())
-                    {
-                        grabbing = hit.transform.gameObject;
-                        grabbing.transform.rotation = transform.rotation;
-                        grabbing.GetComponent<GrabController>().grabber = gameObject;
-                        transform.SetParent(grabbing.transform);
-                        myController.enabled = false;
-                    }
-                } //Let-goin
-                else if (Input.GetButtonUp("Grab"))
-                {
-                    if (grabbing)
-                    {
-                        myController.enabled = true;
-                        grabbing.GetComponent<GrabController>().grabber = null;
-                        transform.SetParent(null);
-                        grabbing = null;
-                    }
+                    myMarker.transform.position = markerLoc;
                 }
             }
 
-            //Toggle isrobot
-            if (Input.GetButtonUp("Switch"))
+            //Grabbin
+            if (Input.GetButtonDown("Grab") && hit.transform)
             {
-                isRobot = !isRobot;
-                hasRobot = false;
-
-                //set active based on isrobot
-                myRobotListener.enabled = isRobot;
-                myRobotCamera.enabled = isRobot;
-                myRobotController.enabled = isRobot;
-                myListener.enabled = !isRobot;
-                myCamera.enabled = !isRobot;
-                myController.enabled = !isRobot;
-
-                if (myMarker)
+                if (hit.transform.gameObject == myRobot)
                 {
-                    myRobot.transform.position = myMarker.transform.position;
-                    myRobot.transform.rotation = transform.rotation;
-                    Destroy(myMarker);
+                    hasRobot = true;
+                    myRobot.SetActive(false);
                 }
-                myRobot.SetActive(true);
+                else if (hit.transform.GetComponent<GrabController>())
+                {
+                    grabbing = hit.transform.gameObject;
+                    grabbing.transform.rotation = transform.rotation;
+                    grabbing.GetComponent<GrabController>().grabber = gameObject;
+                    transform.SetParent(grabbing.transform);
+                    myController.enabled = false;
+                }
+            } //Let-goin
+            else if (Input.GetButtonUp("Grab"))
+            {
+                if (grabbing)
+                {
+                    myController.enabled = true;
+                    grabbing.GetComponent<GrabController>().grabber = null;
+                    transform.SetParent(null);
+                    grabbing = null;
+                }
             }
+        }
+
+        //Toggle isrobot
+        if (Input.GetButtonUp("Switch"))
+        {
+            isRobot = !isRobot;
+            hasRobot = false;
+
+            //set active based on isrobot
+            myRobotListener.enabled = isRobot;
+            myRobotCamera.enabled = isRobot;
+            myRobotController.enabled = isRobot;
+            myListener.enabled = !isRobot;
+            myCamera.enabled = !isRobot;
+            myController.enabled = !isRobot;
+
+            if (myMarker)
+            {
+                myRobot.transform.position = myMarker.transform.position;
+                myRobot.transform.rotation = transform.rotation;
+                Destroy(myMarker);
+            }
+            myRobot.SetActive(true);
         }
         
     }

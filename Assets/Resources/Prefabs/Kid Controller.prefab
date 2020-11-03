@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989920f08a3141345aaecc60fa5ee433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRobot: {fileID: 0}
   myCamera: {fileID: 233967200024886740}
   myListener: {fileID: 233967200031367668}
   marker: {fileID: 5102306607795468497, guid: ce1e63c43b0146b4999c5aaf0d6ec4bb, type: 3}
   dist: 5
+  robot: {fileID: 0}
   isRobot: 0
   hasRobot: 1
 --- !u!1 &1303642272167767581

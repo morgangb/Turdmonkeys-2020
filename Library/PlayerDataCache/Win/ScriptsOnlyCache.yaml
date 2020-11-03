@@ -15,6 +15,8 @@ ScriptsOnlyBuild:
     - RoomManager
     - UnityStandardAssets.Characters.FirstPerson.TurdmonkeysFirstPersonController
     PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PhotonTransformViewEditor
+    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonTransformView
@@ -365,7 +367,7 @@ ScriptsOnlyBuild:
     className: PhotonStatsGui
   - hash:
       serializedVersion: 2
-      Hash: 2d7c7273f073009589b25d1141f3e97b
+      Hash: 38e90fb5822f993a0ca8ef5a1851a588
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KidController
