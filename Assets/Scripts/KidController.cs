@@ -14,6 +14,8 @@ public class KidController : MonoBehaviour
     [SerializeField] private GameObject marker;
     [SerializeField] private float dist = 5f;
     [SerializeField] private GameObject robot;
+    [SerializeField]
+    private string RobotType;
     
     private GameObject myRobot;
     private TurdmonkeysFirstPersonController myController;
@@ -43,7 +45,7 @@ public class KidController : MonoBehaviour
         layerMask = 1 << 8;
         layerMask = ~layerMask;
         
-        myRobot = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "Robot Controller"), transform.position, Quaternion.identity);
+        myRobot = PhotonNetwork.Instantiate(Path.Combine("Prefabs", RobotType), transform.position, Quaternion.identity);
         myRobot.SetActive(false);
         myRobot.GetComponent<RobotController>().myKid = gameObject;
         myRobotController = myRobot.GetComponent<TurdmonkeysFirstPersonController>();

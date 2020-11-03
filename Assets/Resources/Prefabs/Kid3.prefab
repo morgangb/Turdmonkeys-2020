@@ -17,6 +17,7 @@ MonoBehaviour:
   marker: {fileID: 5102306607795468497, guid: ce1e63c43b0146b4999c5aaf0d6ec4bb, type: 3}
   dist: 5
   robot: {fileID: 0}
+  RobotType: Fly
   isRobot: 0
   hasRobot: 1
 --- !u!1 &1303642272167767581
