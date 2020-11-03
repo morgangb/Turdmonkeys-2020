@@ -40,66 +40,56 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_StepCycle;
         private float m_NextStep;
         private bool m_Jumping;
+
+        PhotonView PV;
         
         private void Awake()
         {
-            
+            PV = GetComponent<PhotonView>();
         }
 
         // Use this for initialization
         private void Start()
         {
-            
-            if (GetComponent<PhotonView>().IsMine)
-            {
-                m_CharacterController = GetComponent<CharacterController>();
-                m_Camera =  Camera.main;
-                m_OriginalCameraPosition = m_Camera.transform.localPosition;
-                m_FovKick.Setup(m_Camera);
-                m_HeadBob.Setup(m_Camera, m_StepInterval);
-                m_StepCycle = 0f;
-                m_NextStep = m_StepCycle / 2f;
-                m_Jumping = false;
-                m_MouseLook.Init(transform, m_Camera.transform);
-            }
+            if(!PV.IsMine) { Destroy(GetComponentInChildren<Camera>().gameObject); }
 
-            foreach(Camera camera in Camera.allCameras) {
-                camera.enabled = false;
-            }
+            m_CharacterController = GetComponent<CharacterController>();
+            m_Camera =  Camera.main;
+            m_OriginalCameraPosition = m_Camera.transform.localPosition;
+            m_FovKick.Setup(m_Camera);
+            m_HeadBob.Setup(m_Camera, m_StepInterval);
+            m_StepCycle = 0f;
+            m_NextStep = m_StepCycle / 2f;
+            m_Jumping = false;
+            m_MouseLook.Init(transform, m_Camera.transform);
         }
 
 
         // Update is called once per frame
         private void Update()
         {
-            GetComponentInChildren<Camera>().enabled = true;
+            if(!PV.IsMine) { return; }
 
-            if (GetComponent<PhotonView>().IsMine)
+            RotateView();
+            // the jump state needs to read here to make sure it is not missed
+            if (!m_Jump)
             {
-                
-                RotateView();
-                // the jump state needs to read here to make sure it is not missed
-                if (!m_Jump)
-                {
-                    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-                }
-
-                if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
-                {
-                    StartCoroutine(m_JumpBob.DoBobCycle());
-                    PlayLandingSound();
-                    m_MoveDir.y = 0f;
-                    m_Jumping = false;
-                }
-                if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
-                {
-                    m_MoveDir.y = 0f;
-                }
-
-                m_PreviouslyGrounded = m_CharacterController.isGrounded;
+                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
 
-                
+            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
+            {
+                StartCoroutine(m_JumpBob.DoBobCycle());
+                PlayLandingSound();
+                m_MoveDir.y = 0f;
+                m_Jumping = false;
+            }
+            if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
+            {
+                m_MoveDir.y = 0f;
+            }
+
+            m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
 
 
