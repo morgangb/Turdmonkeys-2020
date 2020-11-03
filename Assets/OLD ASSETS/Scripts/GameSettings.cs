@@ -6,10 +6,13 @@ using UnityEngine;
 public class GameSettings : ScriptableObject
 {
     [SerializeField]
+    private GameObject NameInput;
+    [SerializeField]
     private string _gameVersion = "0.0.0";
     public string GameVersion { get { return _gameVersion; } }
     [SerializeField]
-    private string _nickName = "Player#";
+    private string _nickName = "";
+    
     public string NickName
     {
         get

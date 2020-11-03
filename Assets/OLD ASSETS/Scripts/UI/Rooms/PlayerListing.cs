@@ -12,8 +12,11 @@ public class PlayerListing : MonoBehaviour
 
     public void SetPlayerInfo(Player player)
     {
-        Player = player;
+        Player = player;    
+        
         _text.text = player.NickName;
+        //player.NickName = (string)player.CustomProperties["Name"];
+        
     }
     
 }

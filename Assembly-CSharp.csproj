@@ -122,6 +122,7 @@
     <Compile Include="Assets\OLD ASSETS\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\OLD ASSETS\Scripts\GameSettings.cs" />
     <Compile Include="Assets\OLD ASSETS\Scripts\MasterManager.cs" />
+    <Compile Include="Assets\OLD ASSETS\Scripts\NameMaking.cs" />
     <Compile Include="Assets\OLD ASSETS\Scripts\NetWork\PhotonLobby.cs" />
     <Compile Include="Assets\OLD ASSETS\Scripts\ScriptableObjectSingleton.cs" />
     <Compile Include="Assets\OLD ASSETS\Scripts\SingletonReferences.cs" />

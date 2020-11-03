@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-firstpass.dll:
-    - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     Assembly-CSharp.dll:
     - CreateOrJoinRoomCanvas
     - CreateRoomMenu
@@ -11,6 +9,7 @@ ScriptsOnlyBuild:
     - KidController
     - LeaveRoomMenu
     - MasterManager
+    - NameMaking
     - PhotonLobby
     - PlayerListing
     - PlayerListingsMenu
@@ -222,6 +221,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15288}
     - Class: 114
       Script: {instanceID: 15300}
+    - Class: 114
+      Script: {instanceID: 24812}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -302,8 +303,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13246}
     - Class: 114
-      Script: {instanceID: 13292}
-    - Class: 114
       Script: {instanceID: 13656}
     - Class: 114
       Script: {instanceID: 14254}
@@ -311,8 +310,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15004}
     - Class: 114
       Script: {instanceID: 15024}
-    - Class: 114
-      Script: {instanceID: 15106}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -1804,7 +1801,7 @@ ScriptsOnlyBuild:
     className: ProceduralController
   - hash:
       serializedVersion: 2
-      Hash: cbf6f7a7b6384a8d4bbae402d793925b
+      Hash: 9c482197d8481c3a8fb74d1ddf046dc8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameSettings
@@ -2168,6 +2165,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 5fa581b2e2b4881da5a10df0dcbc2966
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NameMaking
   platform: 5
   scenePathNames:
   - Assets/OLD ASSETS/Scenes/Rooms.unity
