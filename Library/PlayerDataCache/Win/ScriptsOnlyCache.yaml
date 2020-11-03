@@ -32,8 +32,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -49,20 +47,13 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Postprocessing.Runtime.dll:
-    - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
-    - UnityEngine.Rendering.PostProcessing.AutoExposure
-    - UnityEngine.Rendering.PostProcessing.Bloom
     - UnityEngine.Rendering.PostProcessing.ChromaticAberration
-    - UnityEngine.Rendering.PostProcessing.ColorGrading
-    - UnityEngine.Rendering.PostProcessing.DepthOfField
     - UnityEngine.Rendering.PostProcessing.Grain
     - UnityEngine.Rendering.PostProcessing.LensDistortion
-    - UnityEngine.Rendering.PostProcessing.MotionBlur
     - UnityEngine.Rendering.PostProcessing.PostProcessLayer
     - UnityEngine.Rendering.PostProcessing.PostProcessProfile
     - UnityEngine.Rendering.PostProcessing.PostProcessResources
     - UnityEngine.Rendering.PostProcessing.PostProcessVolume
-    - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -126,6 +117,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -145,6 +138,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11276}
     - Class: 114
+      Script: {instanceID: 11280}
+    - Class: 114
       Script: {instanceID: 11310}
     - Class: 114
       Script: {instanceID: 11366}
@@ -152,6 +147,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11482}
     - Class: 114
       Script: {instanceID: 11500}
+    - Class: 114
+      Script: {instanceID: 11506}
     - Class: 114
       Script: {instanceID: 11546}
     - Class: 114
@@ -185,6 +182,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13162}
     - Class: 114
+      Script: {instanceID: 13246}
+    - Class: 114
       Script: {instanceID: 13292}
     - Class: 114
       Script: {instanceID: 13310}
@@ -192,6 +191,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13556}
     - Class: 114
       Script: {instanceID: 13608}
+    - Class: 114
+      Script: {instanceID: 13656}
     - Class: 114
       Script: {instanceID: 13702}
     - Class: 114
@@ -227,6 +228,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 24812}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 124
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -294,8 +297,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 11506}
-    - Class: 114
       Script: {instanceID: 11988}
     - Class: 114
       Script: {instanceID: 12040}
@@ -306,8 +307,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13246}
     - Class: 114
-      Script: {instanceID: 13292}
-    - Class: 114
       Script: {instanceID: 13656}
     - Class: 114
       Script: {instanceID: 14254}
@@ -315,8 +314,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15004}
     - Class: 114
       Script: {instanceID: 15024}
-    - Class: 114
-      Script: {instanceID: 15106}
     - Class: 114
       Script: {instanceID: 35698}
     - Class: 115

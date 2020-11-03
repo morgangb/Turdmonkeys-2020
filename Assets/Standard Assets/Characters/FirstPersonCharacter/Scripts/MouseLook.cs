@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using Photon;
+using Photon.Pun;
+using Photon.Realtime;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -20,6 +23,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
         private bool m_cursorIsLocked = true;
+
+       
 
         public void Init(Transform character, Transform camera)
         {
