@@ -546,7 +546,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.2, z: 0.7}
   m_Children: []
   m_Father: {fileID: 1110948464}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &199536153
 BoxCollider:
@@ -715,7 +715,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b8ecaff7de7e88f45924b5b2c8fdd0fd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3424172
+      value: 2.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8ecaff7de7e88f45924b5b2c8fdd0fd,
         type: 3}
@@ -765,17 +765,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b8ecaff7de7e88f45924b5b2c8fdd0fd,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7648
+      value: 1.5457176
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8ecaff7de7e88f45924b5b2c8fdd0fd,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7648
+      value: 1.5457176
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8ecaff7de7e88f45924b5b2c8fdd0fd,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.7648
+      value: 1.5457176
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b8ecaff7de7e88f45924b5b2c8fdd0fd,
         type: 3}
@@ -6819,12 +6819,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 906610425}
-  - {fileID: 178962029}
-  - {fileID: 2034154116}
-  - {fileID: 368950142}
   - {fileID: 2143146586}
-  - {fileID: 1257938486}
+  - {fileID: 178962029}
+  - {fileID: 368950142}
+  - {fileID: 2034154116}
   - {fileID: 199536152}
+  - {fileID: 1257938486}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7788,7 +7788,7 @@ Transform:
   m_LocalScale: {x: 20, y: 0.2, z: 25}
   m_Children: []
   m_Father: {fileID: 1110948464}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2143146587
 BoxCollider:
