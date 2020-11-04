@@ -577,6 +577,17 @@ MonoBehaviour:
           m_StringArgument: Kid1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 725098210}
+        m_MethodName: ButtonDisable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 105209481}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &105209484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2201,6 +2212,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Kid3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 725098210}
+        m_MethodName: ButtonDisable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 865483280}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &865483283
@@ -5375,6 +5397,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Kid2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 725098210}
+        m_MethodName: ButtonDisable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2020245381}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2020245384

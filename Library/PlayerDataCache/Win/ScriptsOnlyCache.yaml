@@ -166,9 +166,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 72
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -369,7 +375,7 @@ ScriptsOnlyBuild:
     className: PhotonStatsGui
   - hash:
       serializedVersion: 2
-      Hash: 38e90fb5822f993a0ca8ef5a1851a588
+      Hash: 5bb6899009756b8c4a1e2cada5e3dd5e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KidController

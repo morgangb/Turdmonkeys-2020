@@ -4,11 +4,13 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
 using System.IO;
+using UnityEngine.UI;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     public static RoomManager Instance;
     private string KidType;
+    
     
     void Awake()
     {
@@ -41,8 +43,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
         }
     }
 
-    public void SetKidType(string setto)
+    public void SetKidType(string setto) 
     {
         KidType = setto;
+        
+    }
+    public void ButtonDisable(GameObject ToDisable)
+    {
+        ToDisable.GetComponent<Button>().interactable = false;
     }
 }
