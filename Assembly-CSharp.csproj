@@ -108,6 +108,8 @@
     <Compile Include="Assets\LowPolyOpenWorld\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\LowPolyOpenWorld\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\LowPolyOpenWorld\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\LowPolyOpenWorld\Scenes\Assets\3DTOYS\rotatecamera.cs" />
+    <Compile Include="Assets\LowPolyOpenWorld\Scenes\Assets\Enemy.cs" />
     <Compile Include="Assets\Scripts\GrabController.cs" />
     <Compile Include="Assets\Scripts\KidController.cs" />
     <Compile Include="Assets\Scripts\Launcher.cs" />
@@ -132,6 +134,7 @@
     <None Include="Assets\LowPolyOpenWorld\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\LowPolyOpenWorld\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\VR HUD - Sterile Future\SceneAssets\Fonts\read_me.txt" />
     <None Include="Assets\LowPolyOpenWorld\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
     <None Include="Assets\LowPolyOpenWorld\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
     <None Include="Assets\LowPolyOpenWorld\PostProcessing\Resources\Shaders\LutGen.shader" />
@@ -172,6 +175,7 @@
     <None Include="Assets\LowPolyOpenWorld\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
     <None Include="Assets\LowPolyOpenWorld\Nature\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\LowPolyOpenWorld\PostProcessing\Resources\Shaders\Bloom.shader" />
+    <None Include="Assets\LowPolyOpenWorld\Scenes\Assets\3DTOYS\readme.txt" />
     <None Include="Assets\LowPolyOpenWorld\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\LowPolyOpenWorld\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />

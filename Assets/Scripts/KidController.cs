@@ -6,6 +6,7 @@ using Photon;
 using Photon.Pun;
 using Photon.Realtime;
 using System.IO;
+using UnityEngine.UI;
 
 public class KidController : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class KidController : MonoBehaviour
     private GameObject myMarker;
     private int layerMask;
     private GameObject grabbing;
+    private Canvas myRoboCanvas;
 
     public bool isRobot; //Is the player controlling the robot rn?
     public bool hasRobot; //Does the player have the robot rn?
@@ -51,7 +53,7 @@ public class KidController : MonoBehaviour
         myRobotController = myRobot.GetComponent<TurdmonkeysFirstPersonController>();
         myRobotCamera = myRobot.GetComponentInChildren<Camera>();
         myRobotListener = myRobot.GetComponentInChildren<AudioListener>();
-
+        myRoboCanvas = myRobot.GetComponentInChildren<Canvas>();
         myController = GetComponent<TurdmonkeysFirstPersonController>(); //get the fps cont
     }
 
@@ -130,6 +132,7 @@ public class KidController : MonoBehaviour
             myListener.enabled = !isRobot;
             myCamera.enabled = !isRobot;
             myController.enabled = !isRobot;
+            myRoboCanvas.enabled = isRobot;
 
             if (myMarker)
             {
