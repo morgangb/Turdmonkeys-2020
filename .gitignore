@@ -69,3 +69,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/LowPolyOpenWorld/Scenes/Assets/3DTOYS/readme.txt
+Assets/LowPolyOpenWorld/Scenes/Assets/Enemy.cs
+Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+Library/shadercompiler-UnityShaderCompiler.exe1.log
+Library/shadercompiler-UnityShaderCompiler.exe2.log
+Library/shadercompiler-UnityShaderCompiler.exe3.log

@@ -109,7 +109,6 @@
     <Compile Include="Assets\LowPolyOpenWorld\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\LowPolyOpenWorld\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\LowPolyOpenWorld\Scenes\Assets\3DTOYS\rotatecamera.cs" />
-    <Compile Include="Assets\LowPolyOpenWorld\Scenes\Assets\Enemy.cs" />
     <Compile Include="Assets\Scripts\GrabController.cs" />
     <Compile Include="Assets\Scripts\KidController.cs" />
     <Compile Include="Assets\Scripts\Launcher.cs" />
