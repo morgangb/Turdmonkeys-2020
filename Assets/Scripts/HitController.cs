@@ -6,8 +6,7 @@ public class HitController : MonoBehaviour
 {
     [SerializeField] private float maxHP = 10f;
     [SerializeField] private bool immortal = false;
-    [SerializeField] private bool bulletImmune = false;
-    [SerializeField] private bool laserImmune = false;
+    [SerializeField] private bool[] immunities = new bool[] {false, false, false};
     private float curHP;
 
     // Start is called before the first frame update
@@ -19,11 +18,14 @@ public class HitController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        curHP = maxHP;
+        if(immortal) { curHP = maxHP; }
         if(curHP <= 0f) { Destroy(this); }
     }
 
-    public void takeHit(float dmg, bool hold) {
-        if(!bulletImmune && !laserImmune || bulletImmune && hold || laserImmune && !hold) { curHP -= dmg; }
+    public void takeHit(float dmg, int shootType) {
+        if(!immunities[shootType])
+        {
+            curHP -= dmg;
+        }
     }
 }
