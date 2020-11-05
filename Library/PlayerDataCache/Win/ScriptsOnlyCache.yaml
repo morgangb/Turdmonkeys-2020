@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-firstpass.dll:
+    - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     Assembly-CSharp.dll:
     - KidController
     - Launcher
@@ -13,6 +15,8 @@ ScriptsOnlyBuild:
     - RoomManager
     - UnityStandardAssets.Characters.FirstPerson.TurdmonkeysFirstPersonController
     PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PhotonTransformViewEditor
+    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
@@ -83,13 +87,25 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 13216}
+    - Class: 114
+      Script: {instanceID: 14924}
+    - Class: 115
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -146,6 +162,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -157,85 +175,85 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11290}
-    - Class: 114
-      Script: {instanceID: 11292}
-    - Class: 114
       Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11300}
+      Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 11370}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11620}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11738}
+      Script: {instanceID: 11512}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 11630}
+    - Class: 114
+      Script: {instanceID: 11748}
     - Class: 114
       Script: {instanceID: 11798}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 11808}
     - Class: 114
-      Script: {instanceID: 12010}
+      Script: {instanceID: 11978}
     - Class: 114
-      Script: {instanceID: 12148}
+      Script: {instanceID: 12020}
     - Class: 114
-      Script: {instanceID: 12540}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12608}
+      Script: {instanceID: 12550}
     - Class: 114
-      Script: {instanceID: 12706}
+      Script: {instanceID: 12618}
     - Class: 114
-      Script: {instanceID: 12768}
+      Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 13162}
+      Script: {instanceID: 12778}
     - Class: 114
-      Script: {instanceID: 13206}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13414}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13502}
+      Script: {instanceID: 13424}
     - Class: 114
-      Script: {instanceID: 13540}
+      Script: {instanceID: 13512}
     - Class: 114
-      Script: {instanceID: 13544}
+      Script: {instanceID: 13550}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13554}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 13596}
     - Class: 114
-      Script: {instanceID: 13758}
+      Script: {instanceID: 13684}
     - Class: 114
-      Script: {instanceID: 13824}
+      Script: {instanceID: 13768}
     - Class: 114
-      Script: {instanceID: 13842}
+      Script: {instanceID: 13834}
     - Class: 114
-      Script: {instanceID: 13970}
+      Script: {instanceID: 13852}
     - Class: 114
-      Script: {instanceID: 14106}
+      Script: {instanceID: 13980}
     - Class: 114
-      Script: {instanceID: 14158}
+      Script: {instanceID: 14116}
     - Class: 114
-      Script: {instanceID: 14202}
+      Script: {instanceID: 14168}
     - Class: 114
-      Script: {instanceID: 14324}
+      Script: {instanceID: 14212}
     - Class: 114
-      Script: {instanceID: 14336}
+      Script: {instanceID: 14334}
     - Class: 114
-      Script: {instanceID: 14648}
+      Script: {instanceID: 14346}
     - Class: 114
-      Script: {instanceID: 14822}
+      Script: {instanceID: 14658}
     - Class: 114
-      Script: {instanceID: 14840}
+      Script: {instanceID: 14832}
     - Class: 114
-      Script: {instanceID: 14914}
+      Script: {instanceID: 14850}
     - Class: 114
-      Script: {instanceID: 15052}
+      Script: {instanceID: 14924}
+    - Class: 114
+      Script: {instanceID: 15062}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -243,6 +261,8 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
@@ -321,6 +341,12 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
+      Hash: 48aa7e3a10ad49e34c99883f1c252b8d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FreeCameraLogic
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -369,6 +395,12 @@ ScriptsOnlyBuild:
     className: FirstPersonController
   - hash:
       serializedVersion: 2
+      Hash: 07d69ce4a98bc6bb9d8730614c21369e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SimpleSampleCharacterControl
+  - hash:
+      serializedVersion: 2
       Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -391,6 +423,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: MotionBlur
+  - hash:
+      serializedVersion: 2
+      Hash: 97d11d35e9b9a69779387a0c996fcdc8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DemoFree
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -627,7 +665,7 @@ ScriptsOnlyBuild:
     className: PixelPerfectCamera
   - hash:
       serializedVersion: 2
-      Hash: 8b4328f69cbf30af4d3ee1d8656ae321
+      Hash: d839fd486f5432279f237c7aad5d8402
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HitController
@@ -1173,7 +1211,7 @@ ScriptsOnlyBuild:
     className: SimpleActivatorMenu
   - hash:
       serializedVersion: 2
-      Hash: 1a1202ddeeb0fa07168cf0c871bdb922
+      Hash: ef455753956850a7497feab3ecde11b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RobotController
@@ -1475,4 +1513,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Launcher.unity
   - Assets/Scenes/FirstLevel.unity
-  playerPath: D:/Uni Shirt/GameJam/Turdmonkeys-2020/Built Game/Multiplayer 2D Game.exe
+  playerPath: D:/Uni Shirt/GameJam/Turdmonkeys-2020/Build/Multiplayer 2D Game.exe

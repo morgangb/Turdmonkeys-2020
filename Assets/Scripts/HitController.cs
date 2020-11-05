@@ -7,7 +7,7 @@ public class HitController : MonoBehaviour
     [SerializeField] private float maxHP = 10f;
     [SerializeField] private bool immortal = false;
     [SerializeField] private bool[] immunities = new bool[] {false, false, false};
-    private float curHP;
+    [SerializeField] private float curHP;
 
     // Start is called before the first frame update
     void Start()

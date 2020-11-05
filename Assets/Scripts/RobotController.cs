@@ -8,7 +8,7 @@ public class RobotController : MonoBehaviour
 {
     [SerializeField] private float dist = 10f;
     [SerializeField] private PostProcessVolume myPostProcessor;
-    [SerializeField] private GameObject gunEffect;
+    //[SerializeField] private GameObject gunEffect;
     [SerializeField] private int shootType;
     [SerializeField] private float baseDmg;
     [SerializeField] private float range;
@@ -44,7 +44,7 @@ public class RobotController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gunEffect.SetActive(false);
+       // gunEffect.SetActive(false);
 
         if(!PV.IsMine) { return; }
 
@@ -64,7 +64,8 @@ public class RobotController : MonoBehaviour
 
     private void shoot(float dmg)
     {
-        gunEffect.SetActive(true);
+        print("Shooting");
+        //gunEffect.SetActive(true);
 
         //Cast ray for robot stuff
         RaycastHit hit;

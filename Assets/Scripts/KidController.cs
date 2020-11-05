@@ -48,8 +48,8 @@ public class KidController : MonoBehaviour
         layerMask = ~layerMask;
         
         myRobot = PhotonNetwork.Instantiate(Path.Combine("Prefabs", RobotType), transform.position, Quaternion.identity);
-        myRobot.SetActive(false);
         myRobot.GetComponent<RobotController>().myKid = gameObject;
+        myRobot.SetActive(false);        
         myRobotController = myRobot.GetComponent<TurdmonkeysFirstPersonController>();
         myRobotCamera = myRobot.GetComponentInChildren<Camera>();
         myRobotListener = myRobot.GetComponentInChildren<AudioListener>();

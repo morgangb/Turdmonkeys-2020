@@ -77,7 +77,7 @@ MonoBehaviour:
   dist: 10
   myPostProcessor: {fileID: 796853393}
   gunEffect: {fileID: 0}
-  hold: 0
+  shootType: 0
   baseDmg: 0
   range: 0
   myKid: {fileID: 0}
@@ -233,6 +233,26 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2547627665128355908, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: shootType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547627665128355908, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: baseDmg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547627665128355908, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547627665128355908, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: myPostProcessor
+      value: 
+      objectReference: {fileID: 796853393}
     - target: {fileID: 7609966785707472284, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
       propertyPath: m_IsActive

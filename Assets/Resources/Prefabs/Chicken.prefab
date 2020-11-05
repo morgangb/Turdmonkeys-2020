@@ -248,6 +248,21 @@ PrefabInstance:
       propertyPath: myPostProcessor
       value: 
       objectReference: {fileID: 1590868300022049456}
+    - target: {fileID: 2547627665128355908, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: shootType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547627665128355908, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: baseDmg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547627665128355908, guid: 556560cdf3eb1a74183e6c73318f053b,
+        type: 3}
+      propertyPath: range
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7609966785707472284, guid: 556560cdf3eb1a74183e6c73318f053b,
         type: 3}
       propertyPath: m_IsActive
