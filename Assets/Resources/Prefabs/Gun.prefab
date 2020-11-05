@@ -76,10 +76,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dist: 10
   myPostProcessor: {fileID: 796853393}
-  gunEffect: {fileID: 7711437848693794859}
-  shootType: 0
-  baseDmg: 0
-  range: 0
+  shootType: 1
+  baseDmg: 20
+  range: 15
+  flySpeed: 0
   myKid: {fileID: 0}
 --- !u!1 &7711437848693794859
 GameObject:

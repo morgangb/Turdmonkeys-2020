@@ -12,6 +12,7 @@ public class RobotController : MonoBehaviour
     [SerializeField] private int shootType;
     [SerializeField] private float baseDmg;
     [SerializeField] private float range;
+    [SerializeField] private float flySpeed;
     
     private Grain grain = null;
     private KidController myKidController;
@@ -58,8 +59,16 @@ public class RobotController : MonoBehaviour
             myKidController.isRobot = false;
         }
 
-        if (shootType == 0 && Input.GetButton("Fire1")) { shoot(baseDmg * Time.deltaTime); }
+        if ((shootType == 0 || shootType == 2) && Input.GetButton("Fire1")) { shoot(baseDmg * Time.deltaTime); }
         else if (Input.GetButtonDown("Fire1")) { shoot(baseDmg); }
+
+
+        if (shootType == 2)
+        {
+            Debug.Log(Input.GetAxis("Fly") * Time.deltaTime * flySpeed);
+            GetComponent<CharacterController>().Move(new Vector3(0, Input.GetAxisRaw("Fly") * Time.deltaTime * flySpeed, 0));
+
+        }
     }
 
     private void shoot(float dmg)
