@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-firstpass.dll:
-    - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     Assembly-CSharp.dll:
     - KidController
     - Launcher
@@ -15,9 +13,8 @@ ScriptsOnlyBuild:
     - RoomManager
     - UnityStandardAssets.Characters.FirstPerson.TurdmonkeysFirstPersonController
     PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PhotonTransformViewEditor
-    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
+    - ServerSettingsInspector
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonTransformView
@@ -97,8 +94,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
     - Class: 154
       Script: {instanceID: 0}
     - Class: 156
@@ -163,85 +158,85 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16688}
+      Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 16712}
+      Script: {instanceID: 11812}
     - Class: 114
-      Script: {instanceID: 16754}
+      Script: {instanceID: 11840}
     - Class: 114
-      Script: {instanceID: 16842}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 16888}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 17002}
+      Script: {instanceID: 12018}
     - Class: 114
-      Script: {instanceID: 17062}
+      Script: {instanceID: 12132}
     - Class: 114
-      Script: {instanceID: 17122}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 17170}
+      Script: {instanceID: 12300}
     - Class: 114
-      Script: {instanceID: 17180}
+      Script: {instanceID: 12310}
     - Class: 114
-      Script: {instanceID: 17346}
+      Script: {instanceID: 12478}
     - Class: 114
-      Script: {instanceID: 17388}
+      Script: {instanceID: 12520}
     - Class: 114
-      Script: {instanceID: 17522}
+      Script: {instanceID: 12658}
     - Class: 114
-      Script: {instanceID: 17914}
+      Script: {instanceID: 13052}
     - Class: 114
-      Script: {instanceID: 17980}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 18074}
+      Script: {instanceID: 13218}
     - Class: 114
-      Script: {instanceID: 18136}
+      Script: {instanceID: 13280}
     - Class: 114
-      Script: {instanceID: 18530}
+      Script: {instanceID: 13674}
     - Class: 114
-      Script: {instanceID: 18574}
+      Script: {instanceID: 13718}
     - Class: 114
-      Script: {instanceID: 18780}
+      Script: {instanceID: 13924}
     - Class: 114
-      Script: {instanceID: 18786}
+      Script: {instanceID: 13930}
     - Class: 114
-      Script: {instanceID: 18870}
+      Script: {instanceID: 14014}
     - Class: 114
-      Script: {instanceID: 18908}
+      Script: {instanceID: 14052}
     - Class: 114
-      Script: {instanceID: 18912}
+      Script: {instanceID: 14056}
     - Class: 114
-      Script: {instanceID: 18954}
+      Script: {instanceID: 14098}
     - Class: 114
-      Script: {instanceID: 19042}
+      Script: {instanceID: 14186}
     - Class: 114
-      Script: {instanceID: 19118}
+      Script: {instanceID: 14270}
     - Class: 114
-      Script: {instanceID: 19184}
+      Script: {instanceID: 14336}
     - Class: 114
-      Script: {instanceID: 19200}
+      Script: {instanceID: 14354}
     - Class: 114
-      Script: {instanceID: 19326}
+      Script: {instanceID: 14482}
     - Class: 114
-      Script: {instanceID: 19460}
+      Script: {instanceID: 14616}
     - Class: 114
-      Script: {instanceID: 19510}
+      Script: {instanceID: 14666}
     - Class: 114
-      Script: {instanceID: 19554}
+      Script: {instanceID: 14710}
     - Class: 114
-      Script: {instanceID: 19674}
+      Script: {instanceID: 14832}
     - Class: 114
-      Script: {instanceID: 19686}
+      Script: {instanceID: 14844}
     - Class: 114
-      Script: {instanceID: 19994}
+      Script: {instanceID: 15154}
     - Class: 114
-      Script: {instanceID: 20164}
+      Script: {instanceID: 15328}
     - Class: 114
-      Script: {instanceID: 20182}
+      Script: {instanceID: 15346}
     - Class: 114
-      Script: {instanceID: 20256}
+      Script: {instanceID: 15420}
     - Class: 114
-      Script: {instanceID: 20394}
+      Script: {instanceID: 15558}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -265,6 +260,12 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: a1f19ad47d3094e235f21b74dfc423a8
@@ -421,12 +422,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: CullingHandler
-  - hash:
-      serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
   - hash:
       serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
@@ -619,6 +614,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.PixelPerfect.dll
     namespaceName: UnityEngine.U2D
     className: PixelPerfectCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 8b4328f69cbf30af4d3ee1d8656ae321
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HitController
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -1471,12 +1472,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: 8b4328f69cbf30af4d3ee1d8656ae321
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HitController
   platform: 5
   scenePathNames:
   - Assets/Scenes/Launcher.unity

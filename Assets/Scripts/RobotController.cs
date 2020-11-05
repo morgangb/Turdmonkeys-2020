@@ -9,7 +9,7 @@ public class RobotController : MonoBehaviour
     [SerializeField] private float dist = 10f;
     [SerializeField] private PostProcessVolume myPostProcessor;
     [SerializeField] private GameObject gunEffect;
-    [SerializeField] private bool hold;
+    [SerializeField] private int shootType;
     [SerializeField] private float baseDmg;
     [SerializeField] private float range;
     
@@ -58,7 +58,7 @@ public class RobotController : MonoBehaviour
             myKidController.isRobot = false;
         }
 
-        if (hold && Input.GetButton("Fire1")) { shoot(baseDmg * Time.deltaTime); }
+        if (shootType == 0 && Input.GetButton("Fire1")) { shoot(baseDmg * Time.deltaTime); }
         else if (Input.GetButtonDown("Fire1")) { shoot(baseDmg); }
     }
 
@@ -70,7 +70,7 @@ public class RobotController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward), out hit, range, layerMask))
         {
-            if(hit.transform.gameObject.GetComponent<HitController>()) { hit.transform.gameObject.GetComponent<HitController>().takeHit(dmg, hold); }
+            if(hit.transform.gameObject.GetComponent<HitController>()) { hit.transform.gameObject.GetComponent<HitController>().takeHit(dmg, shootType); }
         }
     }
 }
