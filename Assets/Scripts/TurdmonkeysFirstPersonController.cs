@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
+using TMPro;
 
 #pragma warning disable 618, 649
 namespace UnityStandardAssets.Characters.FirstPerson
@@ -42,6 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         public float curHP;
+        private TMP_Text hpText;
 
         PhotonView PV;
         
@@ -54,6 +56,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Start()
         {
             if(!PV.IsMine) { Destroy(GetComponentInChildren<Camera>().gameObject); }
+
+            hpText = GetComponentInChildren<TMP_Text>();
 
             curHP = maxHP;
             
@@ -73,6 +77,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             if(!PV.IsMine) { return; }
+
+            hpText.text = curHP.ToString() + "%";
 
             RotateView();
             // the jump state needs to read here to make sure it is not missed
@@ -105,7 +111,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             
         }
-
 
         private void FixedUpdate()
         {
@@ -194,7 +199,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
         }
 
-
         private void UpdateCameraPosition(float speed)
         {
             if (GetComponent<PhotonView>().IsMine)
@@ -266,7 +270,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
         }
 
-
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
             if (GetComponent<PhotonView>().IsMine)
@@ -284,7 +287,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
                 body.AddForceAtPosition(m_CharacterController.velocity * 0.1f, hit.point, ForceMode.Impulse);
             }
-            
         }
     }
 }
