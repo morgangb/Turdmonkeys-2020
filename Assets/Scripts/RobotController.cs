@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using Photon.Pun;
+using TMPro;
 
 public class RobotController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class RobotController : MonoBehaviour
     private KidController myKidController;
     private Camera myCamera;
     private int layerMask;
+    private TMP_Text hpText;
     
     public GameObject myKid;
 
@@ -47,7 +49,10 @@ public class RobotController : MonoBehaviour
     {
        // gunEffect.SetActive(false);
 
-        if(!PV.IsMine) { return; }
+        if(!PV.IsMine) {
+            GetComponentInChildren<Canvas>().enabled = false;
+            return; 
+        }
 
         //Find range from player
         float kidDist = Vector3.Distance(transform.position, myKid.transform.position);

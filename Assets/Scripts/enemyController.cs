@@ -87,6 +87,11 @@ public class enemyController : MonoBehaviour
                 Debug.Log("STATE NOT RECOGNISED IN ENEMY CONTROLLER");
                 break;
         }
+
+        if (Physics.Raycast (transform.position, -Vector3.up, out hit)) {
+            float distanceToGround = hit.distance;
+            GetComponent<CharacterController>().Move(new Vector3(0, GetComponent<Collider>().bounds.extents.y - hit.distance, 0));
+        }
     }
 
     public void notice(Collider toNotice) 
