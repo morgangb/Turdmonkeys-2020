@@ -132,6 +132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 978778214, guid: e5fb3cb08e376a74abff404b8dd33228, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3074297949760039131, guid: e5fb3cb08e376a74abff404b8dd33228,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -204,6 +208,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5fb3cb08e376a74abff404b8dd33228, type: 3}
+--- !u!1 &35648394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 978778213, guid: e5fb3cb08e376a74abff404b8dd33228,
+    type: 3}
+  m_PrefabInstance: {fileID: 35648393}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &35648395
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35648394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.037398, y: 3.52, z: 1.9177732}
+  m_Center: {x: 0, y: -1.27, z: 0}
 --- !u!1001 &70459696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -515,6 +538,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &178962032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178962030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02412643cb93c3c4ba5399259e78d941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activators:
+  - {fileID: 858413490}
 --- !u!1 &199536151
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +564,8 @@ GameObject:
   - component: {fileID: 199536155}
   - component: {fileID: 199536154}
   - component: {fileID: 199536153}
+  - component: {fileID: 199536157}
+  - component: {fileID: 199536156}
   m_Layer: 0
   m_Name: Pressure Plate
   m_TagString: Untagged
@@ -556,7 +595,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199536151}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -608,6 +647,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199536151}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &199536156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199536151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a4be158a5258540bf148f598277723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stayTriggered: 1
+--- !u!114 &199536157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199536151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8047cca3d3159f34eaf7f1ea67e0d492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  immortal: 1
+  immunities: 010101
+  curHP: 0
+  hit: 0
 --- !u!1 &308047213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1411,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9437be881ad682348bd31aa228922027, type: 3}
+--- !u!1 &858413489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1501084758933746, guid: 9437be881ad682348bd31aa228922027,
+    type: 3}
+  m_PrefabInstance: {fileID: 858413488}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &858413490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858413489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8047cca3d3159f34eaf7f1ea67e0d492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  immortal: 1
+  immunities: 010001
+  curHP: 111
+  hit: 0
 --- !u!1 &893534978
 GameObject:
   m_ObjectHideFlags: 0
@@ -8447,3 +8539,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ada3ef15d4da4b40856f1361fa91538, type: 3}
+--- !u!1 &5489658198697638605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7029502296848949145, guid: 3ada3ef15d4da4b40856f1361fa91538,
+    type: 3}
+  m_PrefabInstance: {fileID: 5489658198697638604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5489658198697638606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489658198697638605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8047cca3d3159f34eaf7f1ea67e0d492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  immortal: 1
+  immunities: 010100
+  curHP: 111
+  hit: 0
