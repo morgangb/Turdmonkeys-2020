@@ -1,13 +1,5 @@
 sceneSetups:
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-- path: Assets/Scenes/Launcher.unity
-=======
-- path: Assets/Scenes/FirstLevel.unity
->>>>>>> Stashed changes
-=======
-- path: Assets/Scenes/Options Test.unity
->>>>>>> Stashed changes
+- path: Assets/LowPolyOpenWorld/Scenes/Example 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
