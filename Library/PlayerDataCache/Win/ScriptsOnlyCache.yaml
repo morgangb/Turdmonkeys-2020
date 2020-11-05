@@ -14,7 +14,6 @@ ScriptsOnlyBuild:
     - UnityStandardAssets.Characters.FirstPerson.TurdmonkeysFirstPersonController
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
-    - ServerSettingsInspector
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonTransformView
@@ -160,83 +159,83 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 11812}
+      Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11840}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 11300}
     - Class: 114
-      Script: {instanceID: 11972}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 12018}
+      Script: {instanceID: 11460}
     - Class: 114
-      Script: {instanceID: 12132}
+      Script: {instanceID: 11506}
     - Class: 114
-      Script: {instanceID: 12250}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 12300}
+      Script: {instanceID: 11738}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 11788}
     - Class: 114
-      Script: {instanceID: 12478}
+      Script: {instanceID: 11798}
     - Class: 114
-      Script: {instanceID: 12520}
+      Script: {instanceID: 11968}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12010}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 12148}
     - Class: 114
-      Script: {instanceID: 13120}
+      Script: {instanceID: 12540}
     - Class: 114
-      Script: {instanceID: 13218}
+      Script: {instanceID: 12608}
     - Class: 114
-      Script: {instanceID: 13280}
+      Script: {instanceID: 12706}
+    - Class: 114
+      Script: {instanceID: 12768}
+    - Class: 114
+      Script: {instanceID: 13162}
+    - Class: 114
+      Script: {instanceID: 13206}
+    - Class: 114
+      Script: {instanceID: 13414}
+    - Class: 114
+      Script: {instanceID: 13502}
+    - Class: 114
+      Script: {instanceID: 13540}
+    - Class: 114
+      Script: {instanceID: 13544}
+    - Class: 114
+      Script: {instanceID: 13586}
     - Class: 114
       Script: {instanceID: 13674}
     - Class: 114
-      Script: {instanceID: 13718}
+      Script: {instanceID: 13758}
     - Class: 114
-      Script: {instanceID: 13924}
+      Script: {instanceID: 13824}
     - Class: 114
-      Script: {instanceID: 13930}
+      Script: {instanceID: 13842}
     - Class: 114
-      Script: {instanceID: 14014}
+      Script: {instanceID: 13970}
     - Class: 114
-      Script: {instanceID: 14052}
+      Script: {instanceID: 14106}
     - Class: 114
-      Script: {instanceID: 14056}
+      Script: {instanceID: 14158}
     - Class: 114
-      Script: {instanceID: 14098}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 14186}
-    - Class: 114
-      Script: {instanceID: 14270}
+      Script: {instanceID: 14324}
     - Class: 114
       Script: {instanceID: 14336}
     - Class: 114
-      Script: {instanceID: 14354}
+      Script: {instanceID: 14648}
     - Class: 114
-      Script: {instanceID: 14482}
+      Script: {instanceID: 14822}
     - Class: 114
-      Script: {instanceID: 14616}
+      Script: {instanceID: 14840}
     - Class: 114
-      Script: {instanceID: 14666}
+      Script: {instanceID: 14914}
     - Class: 114
-      Script: {instanceID: 14710}
-    - Class: 114
-      Script: {instanceID: 14832}
-    - Class: 114
-      Script: {instanceID: 14844}
-    - Class: 114
-      Script: {instanceID: 15154}
-    - Class: 114
-      Script: {instanceID: 15328}
-    - Class: 114
-      Script: {instanceID: 15346}
-    - Class: 114
-      Script: {instanceID: 15420}
-    - Class: 114
-      Script: {instanceID: 15558}
+      Script: {instanceID: 15052}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -268,6 +267,24 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 4bc4346a71a8df53a6b106f68ef3a190
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Shadow
+  - hash:
+      serializedVersion: 2
       Hash: a1f19ad47d3094e235f21b74dfc423a8
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -278,12 +295,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: PunTeams
-  - hash:
-      serializedVersion: 2
-      Hash: 4bc4346a71a8df53a6b106f68ef3a190
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: ab039a385ef4459756519a3fe91dccc6
@@ -652,12 +663,6 @@ ScriptsOnlyBuild:
     className: PhotonRigidbody2DView
   - hash:
       serializedVersion: 2
-      Hash: caa533b001ae39b864ba8425019e2268
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Shadow
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -986,12 +991,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RoomListItem
-  - hash:
-      serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
@@ -1476,5 +1475,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Launcher.unity
   - Assets/Scenes/FirstLevel.unity
-  playerPath: C:/Users/morga/Documents/TurdMonkeys-2020/Turdmonkeys-2020/Built Game/Multiplayer
-    2D Game.exe
+  playerPath: D:/Uni Shirt/GameJam/Turdmonkeys-2020/Built Game/Multiplayer 2D Game.exe
