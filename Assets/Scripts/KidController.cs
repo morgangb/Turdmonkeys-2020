@@ -67,7 +67,7 @@ public class KidController : MonoBehaviour
             //Cast ray for robot stuff
             RaycastHit hit;
             Vector3 markerLoc;
-            if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward), out hit, dist, layerMask))
+            if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward), out hit, dist))
             {
                 markerLoc = hit.point;
             }

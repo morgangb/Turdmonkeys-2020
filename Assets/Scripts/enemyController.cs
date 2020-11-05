@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
@@ -26,6 +27,8 @@ public class enemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int layerMask = 1 << 9;
+        layerMask = ~layerMask;
         RaycastHit hit;
 
         switch(state)
@@ -40,10 +43,12 @@ public class enemyController : MonoBehaviour
                 if(patrolNode >= patrols.Length) { patrolNode = 0; }
                 break;
             case 2: //Noticing
+                print("Noticing");
                 eyes.transform.LookAt(target.transform);
 
-                if (Physics.Raycast(eyes.transform.position, eyes.transform.TransformDirection(Vector3.forward), out hit, 16) && hit.transform.tag == "Player")
+                if (Physics.Raycast(eyes.transform.position, eyes.transform.TransformDirection(Vector3.forward), out hit, 16, layerMask) && hit.transform.tag == "Player")
                 {
+                    print(hit.transform.tag);
                     noticeTime += Time.deltaTime;
                 }
                 else {
@@ -60,18 +65,20 @@ public class enemyController : MonoBehaviour
                 }
                 break;
             case 3: //Chasing
+                print("Chasing");
+                eyes.transform.LookAt(target.transform);
                 transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
                 GetComponent<CharacterController>().Move(transform.TransformDirection(Vector3.forward) * Time.deltaTime * moveSpeed);
 
                 coolDown -= Time.deltaTime;
 
-                if(Physics.Raycast(eyes.transform.position, eyes.transform.TransformDirection(Vector3.forward), out hit, 3) && coolDown <= 0f && hit.transform.tag == "Player")
+                if(Physics.Raycast(eyes.transform.position, eyes.transform.TransformDirection(Vector3.forward), out hit, 10, layerMask) && coolDown <= 0f && hit.transform.tag == "Player")
                 {
                     hit.transform.GetComponent<TurdmonkeysFirstPersonController>().curHP -= dmg;
                     coolDown = coolDownDur;
                 }
 
-                if (!Physics.Raycast(eyes.transform.position, eyes.transform.TransformDirection(Vector3.forward), out hit, 16) && hit.transform.tag == "Player")
+                if (!Physics.Raycast(eyes.transform.position, eyes.transform.TransformDirection(Vector3.forward), out hit, 16,layerMask) && hit.transform.tag == "Player")
                 {
                     state = 2;
                 }
@@ -84,9 +91,10 @@ public class enemyController : MonoBehaviour
 
     public void notice(Collider toNotice) 
     {
-        if (state == 1) {
+        if (state == 1 && toNotice != null) {
             target = toNotice.gameObject;
             state = 2;
         }
+        
     }
 }
