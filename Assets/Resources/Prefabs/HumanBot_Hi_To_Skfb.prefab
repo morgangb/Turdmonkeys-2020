@@ -1365,9 +1365,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77845537a3e7dee40aebd71bcf395222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToNotice: 3
+  timeToNotice: 1
   eyes: {fileID: 1531687515}
-  moveSpeed: 3
+  moveSpeed: 6
   patrols:
   - {fileID: 0}
   - {fileID: 0}
