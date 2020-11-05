@@ -27,6 +27,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
+        [SerializeField] private float maxHP = 100f;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -40,6 +41,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_StepCycle;
         private float m_NextStep;
         private bool m_Jumping;
+        public float curHP;
 
         PhotonView PV;
         
@@ -53,6 +55,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if(!PV.IsMine) { Destroy(GetComponentInChildren<Camera>().gameObject); }
 
+            curHP = maxHP;
+            
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera =  Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
