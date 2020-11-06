@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\AudioTrigger.cs" />
      <Compile Include="Assets\LowPolyOpenWorld\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\LowPolyOpenWorld\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\LowPolyOpenWorld\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
