@@ -76,6 +76,7 @@ public class enemyController : MonoBehaviour
                 {
                     hit.transform.GetComponent<TurdmonkeysFirstPersonController>().curHP -= dmg;
                     coolDown = coolDownDur;
+                    hit.transform.GetComponent<TurdmonkeysFirstPersonController>().HitAudio.Play();
                 }
 
                 if (!Physics.Raycast(eyes.transform.position, eyes.transform.TransformDirection(Vector3.forward), out hit, 16,layerMask) && hit.transform.tag == "Player")

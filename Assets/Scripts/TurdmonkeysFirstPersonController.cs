@@ -45,6 +45,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float curHP;
         private TMP_Text hpText;
 
+        #region AudioSources
+
+        public AudioSource JumpAudio;
+        
+        public AudioSource HitAudio;
+        
+       
+
+
+        #endregion
+
         PhotonView PV;
         
         private void Awake()
@@ -139,7 +150,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     if (m_Jump)
                     {
                         m_MoveDir.y = m_JumpSpeed;
-                        PlayJumpSound();
+                        JumpAudio.Play();
                         m_Jump = false;
                         m_Jumping = true;
                     }

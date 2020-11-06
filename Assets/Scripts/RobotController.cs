@@ -20,10 +20,12 @@ public class RobotController : MonoBehaviour
     private Camera myCamera;
     private int layerMask;
     private TMP_Text hpText;
-    
+
+    public AudioSource RoboStart;
     public GameObject myKid;
 
     PhotonView PV;
+
 
     private void Awake()
     {

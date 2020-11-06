@@ -28,6 +28,9 @@ public class KidController : MonoBehaviour
     private GameObject grabbing;
     private Canvas myRoboCanvas;
 
+    public AudioSource RobotOut;
+    public AudioSource GrabbingRobot;
+
     public bool isRobot; //Is the player controlling the robot rn?
     public bool hasRobot; //Does the player have the robot rn?
 
@@ -96,6 +99,7 @@ public class KidController : MonoBehaviour
                 if (hit.transform.gameObject == myRobot)
                 {
                     hasRobot = true;
+                    GrabbingRobot.Play();
                     myRobot.SetActive(false);
                 }
                 else if (hit.transform.GetComponent<GrabController>())
@@ -138,9 +142,17 @@ public class KidController : MonoBehaviour
             {
                 myRobot.transform.position = myMarker.transform.position;
                 myRobot.transform.rotation = transform.rotation;
+                if (isRobot) 
+                { 
+                    RobotOut.Play();
+                    myRobot.GetComponent<RobotController>().RoboStart.Play(); 
+                }
                 Destroy(myMarker);
+
             }
             myRobot.SetActive(true);
+            
+            
         }
         
     }
