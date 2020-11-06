@@ -2043,7 +2043,6 @@ GameObject:
   - component: {fileID: 5619392923934989104}
   - component: {fileID: 5769756604762911483}
   - component: {fileID: 3804548002833796313}
-  - component: {fileID: 7518636842470099941}
   - component: {fileID: 3319815140133608925}
   - component: {fileID: 6091022701104662333}
   - component: {fileID: 5547946692421327621}
@@ -2240,26 +2239,6 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!114 &7518636842470099941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5619392923926889168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b71f27b7e12e4b47a1ffa63f72fe728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dist: 10
-  myPostProcessor: {fileID: 0}
-  shootType: 0
-  baseDmg: 0
-  range: 0
-  flySpeed: 0
-  RoboStart: {fileID: 0}
-  myKid: {fileID: 0}
 --- !u!114 &3319815140133608925
 MonoBehaviour:
   m_ObjectHideFlags: 0
