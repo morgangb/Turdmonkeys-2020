@@ -39,8 +39,8 @@ public class enemyController : MonoBehaviour
                 transform.LookAt(patrols[patrolNode]);
                 GetComponent<CharacterController>().Move(transform.TransformDirection(Vector3.forward) * Time.deltaTime * moveSpeed);
 
-                if(Vector3.Distance(transform.position, patrols[patrolNode].position) <= 1f) { patrolNode += 1; }
-                if(patrolNode >= patrols.Length) { patrolNode = 0; }
+                if(Vector3.Distance(transform.position, patrols[patrolNode].position) <= 3f) { patrolNode += 1; }
+                if(patrolNode >= patrols.Length) { patrolNode = 0;}
                 break;
             case 2: //Noticing
                 print("Noticing");
@@ -88,9 +88,9 @@ public class enemyController : MonoBehaviour
                 break;
         }
 
-        if (Physics.Raycast (transform.position, -Vector3.up, out hit)) {
+        if (Physics.Raycast (transform.position, Vector3.down, out hit)) {
             float distanceToGround = hit.distance;
-            GetComponent<CharacterController>().Move(new Vector3(0, GetComponent<Collider>().bounds.extents.y - hit.distance, 0));
+            GetComponent<CharacterController>().Move(new Vector3(0, - hit.distance, 0));
         }
     }
 
