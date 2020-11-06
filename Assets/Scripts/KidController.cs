@@ -140,8 +140,11 @@ public class KidController : MonoBehaviour
 
             if (myMarker)
             {
+                
                 myRobot.transform.position = myMarker.transform.position;
                 myRobot.transform.rotation = transform.rotation;
+                myRobot.SetActive(true);
+
                 if (isRobot) 
                 { 
                     RobotOut.Play();

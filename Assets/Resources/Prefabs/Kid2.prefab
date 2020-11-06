@@ -2490,7 +2490,6 @@ GameObject:
   - component: {fileID: 7813433106570332612}
   - component: {fileID: 8178738152022777871}
   - component: {fileID: 1539813620979818029}
-  - component: {fileID: 5315774006094436625}
   - component: {fileID: 1117075586602979113}
   - component: {fileID: 7884879406874249713}
   m_Layer: 8
@@ -2686,25 +2685,6 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!114 &5315774006094436625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7813433106565320740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b71f27b7e12e4b47a1ffa63f72fe728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dist: 10
-  myPostProcessor: {fileID: 0}
-  shootType: 0
-  baseDmg: 0
-  range: 0
-  flySpeed: 0
-  myKid: {fileID: 0}
 --- !u!114 &1117075586602979113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2808,6 +2788,8 @@ MonoBehaviour:
   m_StepInterval: 5
   maxHP: 100
   curHP: 0
+  JumpAudio: {fileID: 0}
+  HitAudio: {fileID: 0}
 --- !u!114 &7884879406874249713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2826,6 +2808,8 @@ MonoBehaviour:
   dist: 5
   robot: {fileID: 0}
   RobotType: Gun
+  RobotOut: {fileID: 0}
+  GrabbingRobot: {fileID: 0}
   isRobot: 0
   hasRobot: 1
 --- !u!1 &7813433106565320742

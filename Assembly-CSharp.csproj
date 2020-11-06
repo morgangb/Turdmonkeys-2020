@@ -111,6 +111,7 @@
     <Compile Include="Assets\LowPolyOpenWorld\Scenes\Assets\3DTOYS\rotatecamera.cs" />
     <Compile Include="Assets\LowPolyOpenWorld\Scenes\Assets\GlitchControl.cs" />
     <Compile Include="Assets\Scenes\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\Cam'sShittySCripts\NextLevelCollide.cs" />
     <Compile Include="Assets\Scripts\GrabController.cs" />
     <Compile Include="Assets\Scripts\HitController.cs" />
     <Compile Include="Assets\Scripts\KidController.cs" />
